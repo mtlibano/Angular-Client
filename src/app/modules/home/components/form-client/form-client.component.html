@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="form">
+        <h1>Cadastrar</h1>
+        <div class="inputBox">
+            <input type="text" id="name" [(ngModel)]="clientSelected!.name" #inputName required>
+            <span>Nome</span>
+        </div>
+        <div class="inputBox">
+            <input type="email" id="email" [(ngModel)]="clientSelected!.email" #inputEmail required>
+            <span>Email</span>
+        </div>
+        <div class="inputBox">
+            <input type="password" id="password" [(ngModel)]="clientSelected!.password" #inputPassword required>
+            <span>Senha</span>
+        </div>
+        <div class="inputBox">
+            <input type="date" id="dateBirth" [(ngModel)]="clientSelected!.dateBirth" required>
+            <span>Data Nascimento</span>
+        </div>
+
+        <button type="submit" (click)="addClientForm(clientSelected!.name, clientSelected!.email, clientSelected!.password, clientSelected!.dateBirth)">Salvar</button>
+
+    </div>
+</div>
